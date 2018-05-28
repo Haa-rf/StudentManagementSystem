@@ -108,8 +108,8 @@ public class StudentDaoImpl implements StudentDao {
 	}
 	
 	@Override
-	public List<Student> findStudentByName(Student student) throws Exception {
-		List<Student> students = new ArrayList<Student>();
+	public ArrayList<Student> findStudentByName(Student student) throws Exception {
+		ArrayList<Student> students = new ArrayList<Student>();
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -119,7 +119,7 @@ public class StudentDaoImpl implements StudentDao {
 			ps.setString(1, student.getStudent_name());
 			rs = ps.executeQuery();
 			
-			if (rs.next()) {
+			while(rs.next()) {
 				Student stu  = new Student();
 				stu.setStudent_id(rs.getString(1));
 				stu.setStudent_name(rs.getString(2));

@@ -1,5 +1,6 @@
 package com.student.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.student.bean.Student;
@@ -33,7 +34,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public List<Student> findStudentByName(Student student) throws Exception {
+	public ArrayList<Student> findStudentByName(Student student) throws Exception {
 		return studentDao.findStudentByName(student);
 	}
 

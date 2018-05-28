@@ -1,5 +1,6 @@
 package com.student.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.student.bean.Student;
@@ -42,7 +43,7 @@ public interface StudentDao {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<Student> findStudentByName(Student student) throws Exception;
+	public ArrayList<Student> findStudentByName(Student student) throws Exception;
 	
 	/**
 	 * 根据学生ID和姓名查找学生

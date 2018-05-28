@@ -79,6 +79,7 @@ public class FindServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		request.setAttribute("students", students);
 		// 分发转向
         response.getWriter().write("Find successfully!");
